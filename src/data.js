@@ -16,17 +16,17 @@ export const social = [
   {
     id: 1,
     icon: <FaFacebook color={socColor} fontSize={socFontSize} />,
-    url: "https://www.facebook.com/",
+    url: "https://www.facebook.com/Louis.Mscl.Photography",
   },
   {
     id: 2,
     icon: <FaInstagram color={socColor} fontSize={socFontSize} />,
-    url: "https://www.instagram.com/",
+    url: "https://www.instagram.com/louis.mscl.photography/?hl=fr",
   },
   {
     id: 3,
     icon: <FaYoutube color={socColor} fontSize={socFontSize} />,
-    url: "https://www.youtube.com/",
+    url: "https://www.youtube.com/channel/UCuDLJ0thba-KkYIITR80QZg",
   },
 ];
 
