@@ -15,7 +15,9 @@ import { categories } from "../../data";
 const Navbar = () => {
   return (
     <Wrapper >
-      <Logo width="100px" />
+      <Link to="/about" style={{ textDecoration: "none" }}>
+       <Logo width="100px" />
+      </Link>
       <Content>
         {categories.map((cat) => {
           const { id, url, text, icon } = cat;

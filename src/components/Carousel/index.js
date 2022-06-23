@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { images } from "../../data";
+import { CategorieImages } from "../../data";
 // Styles
 import { Wrapper, Image } from "./Carousel.styles";
 
@@ -17,7 +17,7 @@ const Carousel = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
-        {images.map((image) => {
+        {CategorieImages.map((image) => {
           const { id, url, description } = image;
           return (
             <SwiperSlide key={id}>

@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: var(--navbarLength);
   height: 100%;
   background: var(--lightBleu);
   display: grid;

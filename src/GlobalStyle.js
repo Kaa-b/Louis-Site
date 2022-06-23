@@ -18,4 +18,5 @@ export const GlobalStyle = createGlobalStyle`
     --transition: all 0.3s linear;
     --gap: 60px;
     --right-left-margin:20%;
+    --navbarLength: 200px;
   }`;

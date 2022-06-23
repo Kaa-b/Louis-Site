@@ -1,6 +1,6 @@
 import React from "react";
 import { Wrapper, Content } from "./Categories.styles";
-import { images } from "../../data";
+import { CategorieImages } from "../../data";
 //Components
 import Grid from "../Grid";
 import Thumb from "../Thumb";
@@ -10,9 +10,9 @@ const Categories = () => {
     <Wrapper>
       <Content>
         <Grid header={"Catégories"}>
-          {images.map((image) => {
+          {CategorieImages.map((image) => {
             const { id, url, categorie, title } = image;
-            return <Thumb key={id} url={url} categorie={categorie} title={title} />;
+            return <Thumb key={id} url={url} categorie={categorie} title={title} description={categorie} clickable={true}/>;
           })}
         </Grid>
       </Content>

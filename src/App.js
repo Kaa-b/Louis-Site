@@ -11,6 +11,9 @@ import { GlobalStyle } from "./GlobalStyle";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./styles.css";
+// Data
+// import { social } from "./data";
+// const { url, redirect } = social;
 
 const App = () => (
   <Router>
@@ -20,7 +23,7 @@ const App = () => (
       <Route path="/*" element={<NotFound />} />
       <Route path="/about/" element={<About />} />
     </Routes>
-    <GlobalStyle/>
+    <GlobalStyle />
   </Router>
 );
 
