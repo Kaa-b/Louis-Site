@@ -8,9 +8,12 @@ import Underline from "../components/Underline";
 import Thumb from "../components/Thumb";
 import Navbar from "../components/Navbar";
 import CategorieHeader from "../components/CategorieHeader";
+import { useGlobalContext } from "../context";
+import { FaBars } from "react-icons/fa";
 
 const Categories = () => {
   const { categories } = useParams();
+  const { openSidebar } = useGlobalContext();
 
   let liste = [];
   for (let i = 0; i < images.length; i++) {
@@ -20,6 +23,9 @@ const Categories = () => {
   }
   return (
     <Wrapper>
+    <button className="sidebar-toggle" onClick={openSidebar}>
+        <FaBars />
+      </button>
       <Navbar />
       <Content>
         <CategorieHeader categorie={categories} />

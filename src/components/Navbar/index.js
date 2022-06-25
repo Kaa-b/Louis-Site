@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaTimes } from "react-icons/fa";
+import { useGlobalContext } from "../../context";
 // Styles
-import {
-  Wrapper,
-  Content,
-  LinkWrapper,
-} from "./Navbar.styles";
+import { Header, Content, LinkWrapper, SocialWrapper, LinkContent } from "./Navbar.styles";
 // Components
 import Logo from "../Logo";
 import SocialMedia from "../SocialMedia";
@@ -13,26 +11,37 @@ import SocialMedia from "../SocialMedia";
 import { categories } from "../../data";
 
 const Navbar = () => {
+  const { isSidebarOpen, closeSidebar, closeSidebarIfClicked } = useGlobalContext();
+
   return (
-    <Wrapper >
-      <Link to="/about" style={{ textDecoration: "none" }}>
-       <Logo width="100px" />
-      </Link>
+    <aside className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
+      <Header>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Logo width="100px" />
+        </Link>
+        <button className="close-btn" onClick={closeSidebar}>
+          <FaTimes />
+        </button>
+      </Header>
       <Content>
         {categories.map((cat) => {
           const { id, url, text, icon } = cat;
           return (
-            <Link key={id} to={url} style={{ textDecoration: "none" }}>
+            <Link key={id} to={url} style={{ textDecoration: "none" }} onClick={closeSidebarIfClicked}>
               <LinkWrapper>
-                {icon}
-                {text}
+                <LinkContent>
+                  {icon}
+                  {text}
+                </LinkContent>
               </LinkWrapper>
             </Link>
           );
         })}
       </Content>
-        <SocialMedia /*direction="row"*//>
-    </Wrapper>
+      <SocialWrapper>
+        <SocialMedia />
+      </SocialWrapper>
+    </aside>
   );
 };
 

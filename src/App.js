@@ -10,6 +10,7 @@ import About from "./pages/About";
 import { GlobalStyle } from "./GlobalStyle";
 import "swiper/css";
 import "swiper/css/pagination";
+import "./index.css";
 import "./styles.css";
 // Data
 // import { social } from "./data";

@@ -36,7 +36,7 @@ const catFontSize = "30px";
 export const categories = [
   {
     id: 1,
-    url: "/",
+    url: "/about",
     text: "Home",
     icon: <FaHome color={catColor} fontSize={catFontSize} />,
   },
