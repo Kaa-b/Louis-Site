@@ -25,7 +25,7 @@ const AppProvider = ({ children }) => {
     if (windowSize > 600) {
         setIsSidebarOpen(true);
       }
-  },[])
+  },[windowSize])
   
 
   return (
@@ -44,7 +44,7 @@ const AppProvider = ({ children }) => {
 };
 
 AppProvider.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.object,
 };
 
 //custom hook, si on veut pas avoir à utiliser useContext dans les autres

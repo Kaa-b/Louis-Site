@@ -11,7 +11,7 @@ import SocialMedia from "../SocialMedia";
 import { categories } from "../../data";
 
 const Navbar = () => {
-  const { isSidebarOpen, closeSidebar, closeSidebarIfClicked } = useGlobalContext();
+  const { isSidebarOpen, closeSidebar, closeSidebarIfClicked, windowSize } = useGlobalContext();
 
   return (
     <aside className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
@@ -19,7 +19,7 @@ const Navbar = () => {
         <Link to="/" style={{ textDecoration: "none" }}>
           <Logo width="100px" />
         </Link>
-        <button className="close-btn" onClick={closeSidebar}>
+        <button className={`${(windowSize < 600) ? "close-btn show-close-btn" : "close-btn"}`}  onClick={closeSidebar}>
           <FaTimes />
         </button>
       </Header>

@@ -4,15 +4,42 @@ import YouTube from "react-youtube";
 import { Wrapper } from "./YouTube.styles";
 
 class Youtube extends React.Component {
+  
   render() {
-    const opts = {
-      height: "390",
-      width: "640",
-      playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        autoplay: 1,
-      },
-    };
+
+    const windowSize = window.innerWidth;
+    let opts = {};
+
+    if (windowSize > 1000) {
+       opts = {
+        height: "390",
+        width: "640",
+        playerVars: {
+          // https://developers.google.com/youtube/player_parameters
+          autoplay: 1,
+        },
+      };
+    } else if (windowSize > 700) {
+      opts = {
+        height: "293",
+        width: "480",
+        playerVars: {
+          // https://developers.google.com/youtube/player_parameters
+          autoplay: 1,
+        },
+      };
+    
+    } else {
+      opts = {
+        height: "195",
+        width: "320",
+        playerVars: {
+          // https://developers.google.com/youtube/player_parameters
+          autoplay: 1,
+        },
+      };
+    }
+    
 
     return (
       <Wrapper>

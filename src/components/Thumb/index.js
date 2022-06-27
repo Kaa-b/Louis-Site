@@ -25,7 +25,7 @@ const Thumb = ({ url, categorie, title, description, clickable }) => {
 
 Thumb.propTypes = {
   url: PropTypes.string,
-  categorie: PropTypes.string,
+  categorie: PropTypes.any,
   title: PropTypes.string,
   description: PropTypes.string,
   clickable: PropTypes.bool,
