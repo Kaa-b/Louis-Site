@@ -7,9 +7,11 @@ import { useGlobalContext } from "../../context";
 import { Wrapper, Image } from "./Carousel.styles";
 
 const Carousel = () => {
-  const { isSidebarOpen, windowSize } = useGlobalContext();
 
-  if (!isSidebarOpen || windowSize > 600) {
+  //Render
+  const { isSidebarOpen, dimensions } = useGlobalContext();
+
+  if (!isSidebarOpen || dimensions.width > 600) {
     return (
       <Wrapper>
         <Swiper

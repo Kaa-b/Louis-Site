@@ -5,8 +5,12 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [windowSize] = useState(window.innerWidth);
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
 
+  // Sidebar
   const openSidebar = () => {
     setIsSidebarOpen(true);
   };
@@ -16,26 +20,52 @@ const AppProvider = ({ children }) => {
   };
 
   const closeSidebarIfClicked = () => {
-    if (windowSize < 600) {
+    if (dimensions.width < 600) {
       setIsSidebarOpen(false);
     }
   };
 
-  useEffect (() => {
-    if (windowSize > 600) {
-        setIsSidebarOpen(true);
-      }
-  },[windowSize])
-  
+  //Resizing
+
+  //Timer to not resize at every pixel but every 500ms instead
+  function debounce(fn, ms) {
+    let timer;
+    return () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        timer = null;
+        fn.apply(this, arguments);
+      }, ms);
+    };
+  }
+
+
+  //Handle the re-render
+  useEffect(() => {
+    const debouncedHandleResize = debounce(function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    },500);
+
+    window.addEventListener("resize", debouncedHandleResize);
+
+    //Cleaning the event listener
+    return () => {
+      window.removeEventListener("resize", debouncedHandleResize);
+    };
+  },);
 
   return (
     <AppContext.Provider
       value={{
         isSidebarOpen,
-        windowSize,
         openSidebar,
         closeSidebar,
         closeSidebarIfClicked,
+        dimensions,
+        debounce,
       }}
     >
       {children}

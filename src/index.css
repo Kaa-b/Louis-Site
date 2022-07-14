@@ -16,7 +16,6 @@ code {
   font-size: 1.75rem;
   background: transparent;
   border-color: transparent;
-  transition: var(--transition);
   cursor: pointer;
   color: var(--white);
   display: flex;
@@ -24,11 +23,7 @@ code {
   position: absolute;
   top: 5px;
   right: 5px;
-  transform: translate(-1000%);
-}
-
-.show-close-btn {
-  transform: translate(0);
+  
 }
 
 .close-btn:hover {
@@ -37,15 +32,13 @@ code {
 
 .sidebar-toggle {
   position: fixed;
-  top: 2rem;
-  left: 3rem;
+  top: 1rem;
+  left: 1rem;
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
   color: var(--clr-primary-5);
-  transition: var(--transition);
   cursor: pointer;
-  animation: bounce 2s ease-in-out infinite;
 }
 
 .sidebar {
@@ -70,5 +63,9 @@ code {
 @media screen and (min-width: 600px) {
   .sidebar {
     width:  var(--navbarLength);
+  }
+
+  .close-btn {
+    display: none;
   }
 }

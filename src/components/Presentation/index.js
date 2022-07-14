@@ -22,10 +22,12 @@ const Presentation = () => {
     <Wrapper>
       <Content>
         <Strings>
-          <h1>Titre</h1>
-          <p>{text.p1}</p>
-          <p>{text.p2}</p>
-          <p>{text.p3}</p>
+          <h1>Présentation</h1>
+          <div>
+          {text.map((val, index) => {
+            return <p key={index}>{val}</p>;
+          })}
+          </div>
         </Strings>
         <Pictures>
           <Image

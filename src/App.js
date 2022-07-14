@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
+import Upload from "./pages/Upload";
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
 import "swiper/css";
@@ -23,6 +24,7 @@ const App = () => (
       <Route path="/:categories" element={<Categories />} />
       <Route path="/*" element={<NotFound />} />
       <Route path="/about/" element={<About />} />
+      <Route path="/upload/" element={<Upload />} />
     </Routes>
     <GlobalStyle />
   </Router>

@@ -1,7 +1,7 @@
 import React from "react";
 import { paragraphe } from "../data";
 // Components
-import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 import Carousel from "../components/Carousel";
 import Text from "../components/Text";
 import Categories from "../components/Categories";
@@ -23,7 +23,7 @@ const About = () => {
       <button className="sidebar-toggle" onClick={openSidebar}>
         <FaBars />
       </button>
-      <Navbar />
+      <Sidebar />
       <Content>
         <Carousel />
         <Text text={text} />
