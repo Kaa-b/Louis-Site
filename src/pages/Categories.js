@@ -20,7 +20,7 @@ const Categories = () => {
 
   //UseEffect to get pictures' url from mongoDB
   useEffect(() => {
-    Axios.get("http://localhost:3001/read").then((response) => {
+    Axios.get("https://mscl-photography.herokuapp.com/read").then((response) => {
       setPicturesData(response.data);
     });
   }, []);
