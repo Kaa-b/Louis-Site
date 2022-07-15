@@ -101,7 +101,7 @@ export const paragraphe = [
   {
     id: 1,
     description: "text accrocheur début du site",
-    text: "Pariatur veniam aute incididunt velit anim ut duis cupidatat ut eu proident. Culpa in sit culpa minim amet quis. Tempor laboris cillum excepteur minim dolor nulla ea reprehenderit qui velit. Cupidatat sunt ex dolore ullamco velit laborum nostrud quis aute ea do.",
+    text: "A small change",
   },
   {
     id: 2,
