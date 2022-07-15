@@ -101,7 +101,7 @@ export const paragraphe = [
   {
     id: 1,
     description: "text accrocheur début du site",
-    text: "A small change",
+    text: "Another small change",
   },
   {
     id: 2,
