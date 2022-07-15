@@ -38,7 +38,7 @@ function UploadImg() {
 
   //Function to send to mongoDB
   const addToDB = (response) => {
-    Axios.post("http://localhost:3001/insert", {
+    Axios.post("https://mscl-photography.herokuapp.com/insert", {
       url: response.data.url,
       categorie: response.data.tags,
       public_id: response.data.public_id,
@@ -47,7 +47,7 @@ function UploadImg() {
 
   //Function to update the categorie in mongoDB
   const updateToDB = (id) => {
-    Axios.put("http://localhost:3001/update", {
+    Axios.put("https://mscl-photography.herokuapp.com/update", {
       id: id,
       newCategorie: newCategorieSelected,
     });
@@ -55,12 +55,12 @@ function UploadImg() {
 
   //Function to delete picture
   const deleteToDB = (id) => {
-    Axios.delete(`http://localhost:3001/delete/${id}`);
+    Axios.delete(`https://mscl-photography.herokuapp.com/delete/${id}`);
   };
 
   //UseEffect to get pictures' url from mongoDB
   useEffect(() => {
-    Axios.get("http://localhost:3001/read").then((response) => {
+    Axios.get("https://mscl-photography.herokuapp.com/read").then((response) => {
       setPicturesData(response.data);
     });
   }, []);
