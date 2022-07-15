@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
+require("dotenv").config();
 
 const pictureModel = require("./models/picturesInfo");
 
@@ -64,6 +65,6 @@ app.delete("/delete/:id", async (req, res) => {
   res.send("deleted");
 });
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log("Server running on port 3001...");
 });
