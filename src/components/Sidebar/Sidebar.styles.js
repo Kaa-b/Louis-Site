@@ -21,7 +21,7 @@ export const LinkWrapper = styled.div`
   transition: var(--transition);
 
   :hover {
-    background: var(--lighterBleu);
+    background: var(--lightBleu);
     color: var(--white);
   }
 

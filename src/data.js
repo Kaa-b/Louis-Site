@@ -100,13 +100,21 @@ export const CategorieImages = [
 export const paragraphe = [
   {
     id: 1,
-    description: "text accrocheur début du site",
-    text: "Another small change",
+    text: [
+
+      "Pourquoi voler ?",
+
+      "Car une fois que vous aurez essayé de voler, vous marcherez sur terre les yeux tournés vers le ciel, car là vous êtes allé, et là il vous tarde de retourner.",
+
+      "~ Léonard de Vinci",
+    ],
   },
   {
     id: 2,
-    description: "Présentation Louis",
+    titre: "Présentation",
     text: [
+      "",
+
       "Photographe d’action spécialisée dans les domaines de l’aéronautique, tant civil que militaire. Des avions de ligne aux avions de chasse, en passant par les hélicoptères et les planeurs. Des prises de vue en conditions réelles comme si vous y étiez.",
 
       " Je suis originaire de Toulouse où j’ai grandi bercée par la capitale de l'aéronautique et ses ballets perpétuels d’avions en tout genre.",

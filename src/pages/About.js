@@ -9,6 +9,7 @@ import Underline from "../components/Underline";
 import Youtube from "../components/Youtube";
 import Presentation from "../components/Presentation";
 import Infos from "../components/Infos";
+import Citation from "../components/Citation";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 // Styles
@@ -26,7 +27,7 @@ const About = () => {
       <Sidebar />
       <Content>
         <Carousel />
-        <Text text={text} />
+        <Citation text={text} />
         <Underline />
         <Categories />
         <Underline />

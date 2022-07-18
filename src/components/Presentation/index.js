@@ -4,6 +4,7 @@ import { paragraphe } from "../../data";
 
 // Component
 import SocialMedia from "../SocialMedia";
+import Text from "../Text";
 //Style
 import {
   Wrapper,
@@ -15,19 +16,14 @@ import {
   SocialMediaContent,
 } from "./Presentation.styles";
 
-const { text } = paragraphe[1];
+const { text, titre } = paragraphe[1];
 
 const Presentation = () => {
   return (
     <Wrapper>
       <Content>
         <Strings>
-          <h1>Présentation</h1>
-          <div>
-          {text.map((val, index) => {
-            return <p key={index}>{val}</p>;
-          })}
-          </div>
+          <Text  text={text} titre={titre} citation={[""]}/>
         </Strings>
         <Pictures>
           <Image

@@ -10,6 +10,7 @@ export const Content = styled.div`
 
 export const Strings = styled.div`
   margin-bottom: var(--gap);
+  font: small-caps bold 24px/1 sans-serif;
 `;
 
 export const Pictures = styled.div`

@@ -7,8 +7,8 @@ export const GlobalStyle = createGlobalStyle`
     --lightGrey: #eee;
     --medGrey: #353535; 
     --darkGrey: #1c1c1c;
-    --lightBleu:#A8DADC;
-    --lighterBleu:rgb(182, 224, 226);
+    --Bleu:#03045E;
+    --lightBleu:#15167A;
     --medBleu:#457B9D;
     --thirdColor:#795663;
     --fontSuperBig: 2.5rem;
@@ -18,5 +18,5 @@ export const GlobalStyle = createGlobalStyle`
     --transition: all 0.3s linear;
     --gap: 60px;
     --right-left-margin:20%;
-    --navbarLength: 200px;
+    --navbarLength: 230px;
   }`;
