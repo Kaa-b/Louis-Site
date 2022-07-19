@@ -1,16 +1,20 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 //Styles
 import { Wrapper, Content } from "./SocialMedia.styles";
 // Data
 import { social } from "../../data";
 
-const SocialMedia = (/*{direction}*/) => (
-  <Wrapper /*style={`flex-direction: ${direction};`}*/>
+const SocialMedia = ({ color }) => (
+  <Wrapper>
     {social.map((socialIcon) => {
-      const { id, icon, url } = socialIcon;
+      const { id, iconW, iconB, url } = socialIcon;
+      var icon = iconW;
+      if (color === "B") {
+        icon = iconB;
+      }
       return (
-        <a key={id} href={url} >
+        <a key={id} href={url}>
           <Content>{icon}</Content>
         </a>
       );
@@ -18,12 +22,12 @@ const SocialMedia = (/*{direction}*/) => (
   </Wrapper>
 );
 
-// SocialMedia.propTypes = {
-//   direction: PropTypes.string,
-// };
+SocialMedia.propTypes = {
+  color: PropTypes.string,
+};
 
-// SocialMedia.defaultProps = {
-//   direction: "row",
-// }
+SocialMedia.defaultProps = {
+  color: "W",
+};
 
 export default SocialMedia;

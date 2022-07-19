@@ -9,23 +9,28 @@ import {
 import { GiGlider, GiAirplane } from "react-icons/gi";
 import { MdPhotoLibrary } from "react-icons/md";
 
-const socColor = "white";
-const socFontSize = "30px";
+const socColorW = "white";
+const socColorB = "#03045E";
+const socFontSizeW = "30px";
+const socFontSizeB = "40px"
 
 export const social = [
   {
     id: 1,
-    icon: <FaFacebook color={socColor} fontSize={socFontSize} />,
+    iconW: <FaFacebook color={socColorW} fontSize={socFontSizeW} />,
+    iconB: <FaFacebook color={socColorB} fontSize={socFontSizeB} />,
     url: "https://www.facebook.com/Louis.Mscl.Photography",
   },
   {
     id: 2,
-    icon: <FaInstagram color={socColor} fontSize={socFontSize} />,
+    iconW: <FaInstagram color={socColorW} fontSize={socFontSizeW} />,
+    iconB: <FaInstagram color={socColorB} fontSize={socFontSizeB} />,
     url: "https://www.instagram.com/louis.mscl.photography/?hl=fr",
   },
   {
     id: 3,
-    icon: <FaYoutube color={socColor} fontSize={socFontSize} />,
+    iconW: <FaYoutube color={socColorW} fontSize={socFontSizeW} />,
+    iconB: <FaYoutube color={socColorB} fontSize={socFontSizeB} />,
     url: "https://www.youtube.com/channel/UCuDLJ0thba-KkYIITR80QZg",
   },
 ];
@@ -130,24 +135,37 @@ export const paragraphe = [
     id: 3,
     description: "Intro catégorie Planeur",
     categorie: "glider",
-    text: "Pariatur veniam aute incididunt velit anim ut duis cupidatat ut eu proident. Culpa in sit culpa minim amet quis. Tempor laboris cillum excepteur minim dolor nulla ea reprehenderit qui velit. Cupidatat sunt ex dolore ullamco velit laborum nostrud quis aute ea do.",
+    text: [
+      "Projetez-vous en train de surfer dans les airs pendant des heures, en survolant sereinement les plus beaux paysages de France…",
+
+      "Imaginez-vous en train de voler avec les aigles dans un planeur silencieux, en jouant avec les courants ascendants créés par le soleil et le vent… Le planeur, c’est un avion sans moteur qui se pilote très simplement et qui permet de voler sans utiliser d’autre énergie que la force des courants aériens. Voler en planeur, c’est jouer avec la puissance des éléments naturels en pilotant une machine légère et performante qui procure des sensations uniques. Le vol en planeur, c’est un sport Passion à pratiquer sans modération en balade, en voltige, ou en compétition.",
+    ],
   },
   {
     id: 4,
     description: "Intro catégorie aviation civile",
     categorie: "civile",
-    text: "Pariatur veniam aute incididunt velit anim ut duis cupidatat ut eu proident. Culpa in sit culpa minim amet quis. Tempor laboris cillum excepteur minim dolor nulla ea reprehenderit qui velit. Cupidatat sunt ex dolore ullamco velit laborum nostrud quis aute ea do.",
+    text: [
+      "Venez vous essayer et découvrir la joie du pilotage aux commandes de ces petits coucous aussi agiles que rapides. Le point de passage de tous les futurs pilotes professionnels afin de maîtriser les bases du vol moteur.",
+
+      "Des avions historiques, des prémisses de l’aéronautique, aux avions des guerres qui ont marqué ces deux derniers siècles.",
+
+      "La technologie au service d’avion toujours plus sûrs, afin de rendre vos voyages toujours plus agréables. découvrez ces géants du ciel capables de franchir des distances inimaginables afin de vous faire découvrir de nouvelles régions. Boeing, Airbus, admirez la bataille féroce entre les plus grands avionneurs de notre ère.",
+
+    ],
   },
   {
     id: 5,
     description: "Intro catégorie aviation militaire",
     categorie: "militaire",
-    text: "Pariatur veniam aute incididunt velit anim ut duis cupidatat ut eu proident. Culpa in sit culpa minim amet quis. Tempor laboris cillum excepteur minim dolor nulla ea reprehenderit qui velit. Cupidatat sunt ex dolore ullamco velit laborum nostrud quis aute ea do.",
+    text: [
+      "Mettre en avant la pointe de l’aéronautique à travers les aéronefs les plus évolués. Faire briller le savoir faire des avionneurs et des pilotes. Des manœuvres toujours plus impressionnantes, au service de l’efficacité et de la performance.  Avions de transport, de chasse ou bien encore des hélicoptères, découvrez comment les armées ont su faire du ciel un terrain d’excellence."
+    ],
   },
   {
     id: 6,
     description: "Intro catégorie Tout",
     categorie: "all",
-    text: "Pariatur veniam aute incididunt velit anim ut duis cupidatat ut eu proident. Culpa in sit culpa minim amet quis. Tempor laboris cillum excepteur minim dolor nulla ea reprehenderit qui velit. Cupidatat sunt ex dolore ullamco velit laborum nostrud quis aute ea do.",
+    text: "",
   },
 ];

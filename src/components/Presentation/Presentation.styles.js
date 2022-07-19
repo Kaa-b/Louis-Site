@@ -10,7 +10,6 @@ export const Content = styled.div`
 
 export const Strings = styled.div`
   margin-bottom: var(--gap);
-  font: small-caps bold 24px/1 sans-serif;
 `;
 
 export const Pictures = styled.div`
@@ -24,6 +23,13 @@ export const Image = styled.img`
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
+  border:2px solid #fff;
+  -moz-box-shadow: 0px 6px 5px #ccc;
+  -webkit-box-shadow: 0px 6px 5px #ccc;
+  box-shadow: 0px 6px 5px #ccc;
+  -moz-border-radius:190px;
+  -webkit-border-radius:190px;
+  border-radius:190px;
 `;
 
 export const SocialMediaWrapper = styled.div`
@@ -33,7 +39,4 @@ export const SocialMediaWrapper = styled.div`
 
 export const SocialMediaContent = styled.div`
   display: flex;
-  background-color: var(--lightBleu);
-  padding: 15px;
-  border-radius: 50%;
 `;
