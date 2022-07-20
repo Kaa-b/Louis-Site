@@ -36,6 +36,8 @@ function UploadImg() {
   const [flagPlane, setFlagPlane] = useState(true);
   const [flagMeeting, setFlagMeeting] = useState(true);
 
+  const { REACT_APP_CLOUDINARY_PRESET, REACT_APP_CLOUDINARY_CLOUDNAME } = process.env;
+
   //Function to send to mongoDB
   const addToDB = (response) => {
     Axios.post("https://mscl-photography.herokuapp.com/insert", {
@@ -70,10 +72,10 @@ function UploadImg() {
     const formData = new FormData();
     formData.append("file", imageSelected);
     formData.append("tags", categorieSelected);
-    formData.append("upload_preset", "wgrgvc40");
+    formData.append("upload_preset", `${REACT_APP_CLOUDINARY_PRESET}`);
 
     Axios.post(
-      "https://api.cloudinary.com/v1_1/dfpnxd8gj/image/upload",
+      `https://api.cloudinary.com/v1_1/${REACT_APP_CLOUDINARY_CLOUDNAME}/image/upload`,
       formData
     )
       .then((response) => {
