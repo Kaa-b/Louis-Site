@@ -13,9 +13,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./index.css";
 import "./styles.css";
-// Data
-// import { social } from "./data";
-// const { url, redirect } = social;
 
 const App = () => (
   <Router>

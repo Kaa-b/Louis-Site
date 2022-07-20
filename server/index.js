@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 mongoose.connect(
-  "mongodb+srv://Ka_m:capsul67@cluster0.qr12onz.mongodb.net/louis-mscl-db?retryWrites=true&w=majority",
+  `mongodb+srv://${process.env.REACT_APP_SERVER_DATABASE_USERNAME}:${process.env.REACT_APP_SERVER_DATABASE_PASSWORD}@${process.env.REACT_APP_SERVER_DATABASE}/${process.env.REACT_APP_SERVER_DATABASE_NAME}?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
   }

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Wrapper, Content } from "./Categories.styles";
-import { images } from "../data";
 import Axios from "axios";
 //Components
 import Grid from "../components/Grid";
@@ -11,7 +10,6 @@ import Sidebar from "../components/Sidebar";
 import CategorieHeader from "../components/CategorieHeader";
 import { useGlobalContext } from "../context";
 import { FaBars } from "react-icons/fa";
-import { Image } from "cloudinary-react";
 
 const Categories = () => {
   const { categories } = useParams();
