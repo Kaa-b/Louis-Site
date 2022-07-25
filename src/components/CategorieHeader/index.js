@@ -19,7 +19,6 @@ const CategorieHeader = ({categorie}) => {
       <Content>
       <h1>{parag.description}</h1>
       <p>{parag.text}</p>
-        <div>You are in the {categorie} page</div>
       </Content>
     </Wrapper>
   );

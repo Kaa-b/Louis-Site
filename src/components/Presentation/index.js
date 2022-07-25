@@ -1,7 +1,7 @@
 import React from "react";
 import { paragraphe } from "../../data";
-// import PropTypes from "prop-types";
-
+// Images
+import profilePicture from "../../images/profile.jpeg";
 // Component
 import SocialMedia from "../SocialMedia";
 import Text from "../Text";
@@ -27,7 +27,7 @@ const Presentation = () => {
         </Strings>
         <Pictures>
           <Image
-            src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg"
+            src={profilePicture}
             alt="Louis' Profile picture"
           />
           <SocialMediaWrapper>
