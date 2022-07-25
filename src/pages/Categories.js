@@ -38,7 +38,7 @@ const Categories = () => {
       <Content>
         <CategorieHeader categorie={categories} />
         <Underline />
-        <Grid header="Début grille">
+        <Grid header="">
           {liste.map((val) => {
 
             return (

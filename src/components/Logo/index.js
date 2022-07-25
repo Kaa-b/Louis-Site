@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 // Styles
 import { Image, Wrapper } from "./Logo.styles";
 // Images
-import LogoLouis from "../../images/logo.png";
+import LogoLouis from "../../images/logo_large.png";
 
 const Logo = ({width}) => (
   <Wrapper>

@@ -10,6 +10,7 @@ import {
   SocialWrapper,
   LinkContent,
   LogoWrapper,
+  LoginWrapper,
 } from "./Sidebar.styles";
 // Components
 import Logo from "../Logo";
@@ -35,9 +36,13 @@ const Sidebar = () => {
   return (
     <aside className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
       <Header>
-        <Link to="/" style={{ textDecoration: "none" }} onClick={closeSidebarIfClicked}>
+        <Link
+          to="/"
+          style={{ textDecoration: "none" }}
+          onClick={closeSidebarIfClicked}
+        >
           <LogoWrapper>
-            <Logo width="100px" />
+            <Logo width="160px" />
           </LogoWrapper>
         </Link>
         <button className="close-btn" onClick={closeSidebar}>
@@ -67,6 +72,10 @@ const Sidebar = () => {
       <SocialWrapper>
         <SocialMedia />
       </SocialWrapper>
+
+      <Link style={{ textDecoration: "none" }} to="/login">
+        <LoginWrapper>Login</LoginWrapper>
+      </Link>
     </aside>
   );
 };

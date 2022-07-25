@@ -17,7 +17,7 @@ const CentralMenu = () => (
   <Wrapper>
     <Content>
       <LogoWrapper>
-        <Logo width="180px"/>
+        <Logo width="250px"/>
       </LogoWrapper>
 
       <ButtonWrapper>

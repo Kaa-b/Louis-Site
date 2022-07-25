@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { useGlobalContext } from "./context";
 // Routing
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //Pages
@@ -7,6 +8,10 @@ import Categories from "./pages/Categories";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Upload from "./pages/Upload";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import PrivateRoute from "./pages/PrivateRoute";
+import ForgotPassword from "./pages/ForgotPassword";
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
 import "swiper/css";
@@ -21,7 +26,12 @@ const App = () => (
       <Route path="/:categories" element={<Categories />} />
       <Route path="/*" element={<NotFound />} />
       <Route path="/about/" element={<About />} />
-      <Route path="/upload/" element={<Upload />} />
+      <Route path="/login/" element={<Login />} />
+      <Route path="/signup/" element={<Signup />} />
+      <Route path="/forgot-password/" element={<ForgotPassword />} />
+      <Route path="/upload/" element={<PrivateRoute />}>
+        <Route path="/upload/" element={<Upload />} />
+      </Route>
     </Routes>
     <GlobalStyle />
   </Router>

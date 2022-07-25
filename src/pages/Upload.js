@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 // Components
 import Sidebar from "../components/Sidebar";
 import UploadImg from "../components/UploadImg";
+import { Link, useNavigate } from "react-router-dom";
+import { Card, Button, Alert } from "react-bootstrap";
 // Styles
 import { Wrapper, Content } from "./Upload.styles";
 import { useGlobalContext } from "../context";
 import { FaBars } from "react-icons/fa";
 
-
 const Upload = () => {
-  const { openSidebar } = useGlobalContext();
+  const [error, setError] = useState("");
+  const { openSidebar, currentUser, logout } = useGlobalContext();
+  const navigate = useNavigate();
+
+  async function handleLogout() {
+    setError("");
+
+    try {
+      await logout();
+      navigate("/about");
+    } catch {
+      setError("Failed to log out");
+    }
+  }
 
   return (
     <Wrapper>
@@ -18,7 +32,12 @@ const Upload = () => {
       </button>
       <Sidebar />
       <Content>
-        <UploadImg/>
+        <div className="w-100 text-center mt-2">
+          <Button variant="link" onClick={handleLogout}>
+            Log Out
+          </Button>
+        </div>
+        <UploadImg />
       </Content>
     </Wrapper>
   );

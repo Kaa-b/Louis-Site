@@ -45,6 +45,7 @@ export const SocialWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-grow: 2;
+  align-items: flex-end;
 `;
 
 export const LogoWrapper = styled.div`
@@ -64,3 +65,12 @@ export const LogoWrapper = styled.div`
     }
   }
 `;
+
+export const LoginWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  font-size: var(--fontSmall);
+  text-transform: capitalize;
+  color: var(--white);
+  padding: 20px 0 10px 0;
+`

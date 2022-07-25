@@ -6,8 +6,9 @@ import {
   FaHome,
   FaPlaneDeparture,
 } from "react-icons/fa";
-import { GiGlider, GiAirplane } from "react-icons/gi";
+import { GiGlider } from "react-icons/gi";
 import { MdPhotoLibrary } from "react-icons/md";
+import { IoMdJet } from "react-icons/io"
 
 const socColorW = "white";
 const socColorB = "#03045E";
@@ -61,7 +62,7 @@ export const categories = [
     id: 4,
     url: "/militaire",
     text: "Aviation militaire",
-    icon: <GiAirplane color={catColor} fontSize={catFontSize} />,
+    icon: <IoMdJet color={catColor} fontSize={catFontSize} />,
   },
   {
     id: 5,

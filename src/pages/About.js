@@ -1,5 +1,6 @@
 import React from "react";
 import { paragraphe } from "../data";
+import { Link } from "react-router-dom";
 // Components
 import Sidebar from "../components/Sidebar";
 import Carousel from "../components/Carousel";

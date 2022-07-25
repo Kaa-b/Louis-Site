@@ -1,16 +1,22 @@
 import React, { useState, useContext, useEffect } from "react";
 import PropTypes from "prop-types";
+import { auth } from "./firebase";
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+  //Sidebar
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth,
   });
+  //Authentification
+  const [currentUser, setCurrentUser] = useState();
+  const [loading, setLoading] = useState(true);
 
-  // Sidebar
+  // Sidebar ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
   const openSidebar = () => {
     setIsSidebarOpen(true);
   };
@@ -25,7 +31,7 @@ const AppProvider = ({ children }) => {
     }
   };
 
-  //Resizing
+  //Resizing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   //Timer to not resize at every pixel but every 500ms instead
   function debounce(fn, ms) {
@@ -39,7 +45,6 @@ const AppProvider = ({ children }) => {
     };
   }
 
-
   //Handle the re-render
   useEffect(() => {
     const debouncedHandleResize = debounce(function handleResize() {
@@ -47,7 +52,7 @@ const AppProvider = ({ children }) => {
         height: window.innerHeight,
         width: window.innerWidth,
       });
-    },500);
+    }, 500);
 
     window.addEventListener("resize", debouncedHandleResize);
 
@@ -55,7 +60,42 @@ const AppProvider = ({ children }) => {
     return () => {
       window.removeEventListener("resize", debouncedHandleResize);
     };
-  },);
+  });
+
+  //Authentification ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  function signup(email, password) {
+    return auth.createUserWithEmailAndPassword(email, password);
+  }
+
+  function login(email, password) {
+    return auth.signInWithEmailAndPassword(email, password);
+  }
+
+  function logout() {
+    return auth.signOut();
+  }
+
+  function resetPassword(email) {
+    return auth.sendPasswordResetEmail(email);
+  }
+
+  function updateEmail(email) {
+    return currentUser.updateEmail(email);
+  }
+
+  function updatePassword(password) {
+    return currentUser.updatePassword(password);
+  }
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setCurrentUser(user);
+      setLoading(false);
+    });
+
+    return unsubscribe;
+  }, []);
 
   return (
     <AppContext.Provider
@@ -66,6 +106,13 @@ const AppProvider = ({ children }) => {
         closeSidebarIfClicked,
         dimensions,
         debounce,
+        currentUser,
+        login,
+        signup,
+        logout,
+        resetPassword,
+        updateEmail,
+        updatePassword,
       }}
     >
       {children}
