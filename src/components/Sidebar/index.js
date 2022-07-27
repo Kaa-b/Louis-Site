@@ -42,7 +42,7 @@ const Sidebar = () => {
           onClick={closeSidebarIfClicked}
         >
           <LogoWrapper>
-            <Logo width="160px" />
+            <Logo width="140px" />
           </LogoWrapper>
         </Link>
         <button className="close-btn" onClick={closeSidebar}>
@@ -70,7 +70,7 @@ const Sidebar = () => {
         })}
       </Content>
       <SocialWrapper>
-        <SocialMedia />
+        <SocialMedia/>
       </SocialWrapper>
 
       <Link style={{ textDecoration: "none" }} to="/login">

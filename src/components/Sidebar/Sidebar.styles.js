@@ -17,12 +17,10 @@ export const Content = styled.div`
 export const LinkWrapper = styled.div`
   display: flex;
   justify-content: center;
-  font-size: var(--fontMed);
   transition: var(--transition);
 
   :hover {
-    background: var(--lightBleu);
-    color: var(--white);
+    text-decoration: underline;
   }
 
   @media screen and (min-width: 600px) {
@@ -34,9 +32,9 @@ export const LinkWrapper = styled.div`
 export const LinkContent = styled.div`
   display: flex;
   align-items: center;
-  font-size: var(--fontMed);
+  font-size: var(--fontSmall);
   text-transform: capitalize;
-  color: var(--white);
+  color: var(--Bleu);
   padding: 5px 0;
   gap: 20px;
 `;
@@ -72,6 +70,6 @@ export const LoginWrapper = styled.div`
   justify-content: center;
   font-size: var(--fontSmall);
   text-transform: capitalize;
-  color: var(--white);
+  color: var(--Bleu);
   padding: 20px 0 10px 0;
 `

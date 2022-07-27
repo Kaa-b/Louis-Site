@@ -10,7 +10,7 @@ import { GiGlider } from "react-icons/gi";
 import { MdPhotoLibrary } from "react-icons/md";
 import { IoMdJet } from "react-icons/io"
 
-const socColorW = "white";
+const socColorW = "#03045E";
 const socColorB = "#03045E";
 const socFontSizeW = "30px";
 const socFontSizeB = "40px"
@@ -36,8 +36,8 @@ export const social = [
   },
 ];
 
-const catColor = "white";
-const catFontSize = "30px";
+const catColor = "#03045E";
+const catFontSize = "22px";
 
 export const categories = [
   {
