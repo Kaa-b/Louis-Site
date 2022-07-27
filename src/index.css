@@ -17,7 +17,7 @@ code {
   background: transparent;
   border-color: transparent;
   cursor: pointer;
-  color: var(--white);
+  color: var(--Bleu);
   display: flex;
   align-self: flex-start;
   position: absolute;
@@ -38,7 +38,7 @@ code {
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
-  color: var(--clr-primary-5);
+  color: var(--Bleu);
   cursor: pointer;
 }
 

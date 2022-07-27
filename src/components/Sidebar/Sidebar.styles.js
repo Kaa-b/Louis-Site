@@ -3,8 +3,12 @@ import styled from "styled-components";
 export const Header = styled.div`
   display: flex;
   flex-grow: 2;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 600px) {
+    justify-content: flex-start;
+  }
 `;
 
 export const Content = styled.div`
@@ -49,7 +53,7 @@ export const SocialWrapper = styled.div`
 export const LogoWrapper = styled.div`
   transition: all 0.3s;
   animation: animateThumb 0.5s;
-  padding: 0 0 0 16px;
+  padding-left: 16px;
 
   :hover {
     opacity: 0.7;
@@ -63,6 +67,7 @@ export const LogoWrapper = styled.div`
       opacity: 1;
     }
   }
+  
 `;
 
 export const LoginWrapper = styled.div`
