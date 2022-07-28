@@ -15,7 +15,7 @@ const Logo = ({ width, color }) => {
 
   useEffect(() => {
     if (dimensions.width < 600) {
-      setWidthScreen("100px");
+      setWidthScreen("200px");
     }
   }, [dimensions]);
 
