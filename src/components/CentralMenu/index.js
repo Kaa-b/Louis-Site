@@ -27,10 +27,13 @@ const CentralMenu = () => (
       </ButtonWrapper>
 
       <SocialMediaWrapper>
-        <SocialMedia />
+        <SocialMedia color={"W"}/>
       </SocialMediaWrapper>
     </Content>
   </Wrapper>
 );
 
 export default CentralMenu;
+
+
+//Ajouter une option de couleur pour le logo et pour les réseaux sociaux à l'appel de ces components pour le menu principal

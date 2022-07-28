@@ -134,7 +134,7 @@ export const paragraphe = [
   },
   {
     id: 3,
-    description: "Intro catégorie Planeur",
+    description: "Planeur",
     categorie: "glider",
     text: [
       "Projetez-vous en train de surfer dans les airs pendant des heures, en survolant sereinement les plus beaux paysages de France…",
@@ -144,7 +144,7 @@ export const paragraphe = [
   },
   {
     id: 4,
-    description: "Intro catégorie aviation civile",
+    description: "Aviation civile",
     categorie: "civile",
     text: [
       "Venez vous essayer et découvrir la joie du pilotage aux commandes de ces petits coucous aussi agiles que rapides. Le point de passage de tous les futurs pilotes professionnels afin de maîtriser les bases du vol moteur.",
@@ -157,7 +157,7 @@ export const paragraphe = [
   },
   {
     id: 5,
-    description: "Intro catégorie aviation militaire",
+    description: "Aviation militaire",
     categorie: "militaire",
     text: [
       "Mettre en avant la pointe de l’aéronautique à travers les aéronefs les plus évolués. Faire briller le savoir faire des avionneurs et des pilotes. Des manœuvres toujours plus impressionnantes, au service de l’efficacité et de la performance.  Avions de transport, de chasse ou bien encore des hélicoptères, découvrez comment les armées ont su faire du ciel un terrain d’excellence."
@@ -165,7 +165,7 @@ export const paragraphe = [
   },
   {
     id: 6,
-    description: "Intro catégorie Tout",
+    description: "Toute les photos",
     categorie: "all",
     text: "",
   },
