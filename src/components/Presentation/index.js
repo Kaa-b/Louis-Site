@@ -32,7 +32,7 @@ const Presentation = () => {
           />
           <SocialMediaWrapper>
             <SocialMediaContent>
-              <SocialMedia color={"B"}/>
+              <SocialMedia element="About"/>
             </SocialMediaContent>
           </SocialMediaWrapper>
         </Pictures>

@@ -10,28 +10,31 @@ import { GiGlider } from "react-icons/gi";
 import { MdPhotoLibrary } from "react-icons/md";
 import { IoMdJet } from "react-icons/io"
 
-const socColorW = "#03045E";
+const socColorW = "white";
 const socColorB = "#03045E";
-const socFontSizeW = "30px";
-const socFontSizeB = "40px"
+const socFontSizeSmall = "30px";
+const socFontSizeBig = "40px"
 
 export const social = [
   {
     id: 1,
-    iconW: <FaFacebook color={socColorW} fontSize={socFontSizeW} />,
-    iconB: <FaFacebook color={socColorB} fontSize={socFontSizeB} />,
+    iconHome: <FaFacebook color={socColorW} fontSize={socFontSizeSmall} />,
+    iconSidebar: <FaFacebook color={socColorB} fontSize={socFontSizeSmall} />,
+    iconAbout: <FaFacebook color={socColorB} fontSize={socFontSizeBig} />,
     url: "https://www.facebook.com/Louis.Mscl.Photography",
   },
   {
     id: 2,
-    iconW: <FaInstagram color={socColorW} fontSize={socFontSizeW} />,
-    iconB: <FaInstagram color={socColorB} fontSize={socFontSizeB} />,
+    iconHome: <FaInstagram color={socColorW} fontSize={socFontSizeSmall} />,
+    iconSidebar: <FaInstagram color={socColorB} fontSize={socFontSizeSmall} />,
+    iconAbout: <FaInstagram color={socColorB} fontSize={socFontSizeBig} />,
     url: "https://www.instagram.com/louis.mscl.photography/?hl=fr",
   },
   {
     id: 3,
-    iconW: <FaYoutube color={socColorW} fontSize={socFontSizeW} />,
-    iconB: <FaYoutube color={socColorB} fontSize={socFontSizeB} />,
+    iconHome: <FaYoutube color={socColorW} fontSize={socFontSizeSmall} />,
+    iconSidebar: <FaYoutube color={socColorB} fontSize={socFontSizeSmall} />,
+    iconAbout: <FaYoutube color={socColorB} fontSize={socFontSizeBig} />,
     url: "https://www.youtube.com/channel/UCuDLJ0thba-KkYIITR80QZg",
   },
 ];

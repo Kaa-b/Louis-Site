@@ -17,17 +17,17 @@ const CentralMenu = () => (
   <Wrapper>
     <Content>
       <LogoWrapper>
-        <Logo width="250px"/>
+        <Logo width="250px" color="W"/>
       </LogoWrapper>
 
       <ButtonWrapper>
         <Link to="/about/" style={{textDecoration:'none'}} >
-          <Button text="ENTRER" /*callback={}*/ />
+          <Button text="ENTRER" />
         </Link>
       </ButtonWrapper>
 
       <SocialMediaWrapper>
-        <SocialMedia color={"W"}/>
+        <SocialMedia element={"Home"}/>
       </SocialMediaWrapper>
     </Content>
   </Wrapper>

@@ -5,13 +5,15 @@ import { Wrapper, Content } from "./SocialMedia.styles";
 // Data
 import { social } from "../../data";
 
-const SocialMedia = ({ color }) => (
+const SocialMedia = ({ element }) => (
   <Wrapper>
     {social.map((socialIcon) => {
-      const { id, iconW, iconB, url } = socialIcon;
-      var icon = iconW;
-      if (color === "B") {
-        icon = iconB;
+      const { id, iconHome, iconSidebar, iconAbout, url } = socialIcon;
+      var icon = iconHome;
+      if (element === "Sidebar") {
+        icon = iconSidebar;
+      } else if (element === "About") {
+        icon = iconAbout;
       }
       return (
         <a key={id} href={url}>
@@ -23,11 +25,11 @@ const SocialMedia = ({ color }) => (
 );
 
 SocialMedia.propTypes = {
-  color: PropTypes.string,
+  element: PropTypes.string,
 };
 
 SocialMedia.defaultProps = {
-  color: "W",
+  element: "Home",
 };
 
 export default SocialMedia;

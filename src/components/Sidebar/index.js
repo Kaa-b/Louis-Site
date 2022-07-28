@@ -70,7 +70,7 @@ const Sidebar = () => {
         })}
       </Content>
       <SocialWrapper>
-        <SocialMedia/>
+        <SocialMedia element="Sidebar"/>
       </SocialWrapper>
 
       <Link style={{ textDecoration: "none" }} to="/login">
