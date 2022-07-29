@@ -16,8 +16,10 @@ const Logo = ({ width, color }) => {
   useEffect(() => {
     if (dimensions.width < 600) {
       setWidthScreen("200px");
+    } else {
+      setWidthScreen(width)
     }
-  }, [dimensions]);
+  }, [dimensions, width]);
 
   if (color === "W") {
     LogoLouis = LogoLouisWhite;

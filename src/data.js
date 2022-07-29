@@ -79,7 +79,7 @@ export const CategorieImages = [
   {
     id: 1,
     description: "Catégorie planeur",
-    url: "https://res.cloudinary.com/dfpnxd8gj/image/upload/v1657711816/ujeobfnsmnx4lietucwt.jpg",
+    url: "https://res.cloudinary.com/dfpnxd8gj/image/upload/v1657711856/vixb5fqcmezdgaswf5oz.jpg",
     categorie: "glider",
     title: "Planeur",
   },
